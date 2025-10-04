@@ -1,0 +1,69 @@
+# ===============================
+# Node & Package Managers
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ===============================
+# Build Outputs
+# ===============================
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# ===============================
+# Environment Files
+# ===============================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===============================
+# OS / Editor
+# ===============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ===============================
+# Chrome Extension Specific
+# ===============================
+# Built extension packages (zips)
+*.crx
+*.pem
+*.zip
+
+# ===============================
+# Mobile (Flutter/Dart later)
+# ===============================
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework/
+**/ios/Flutter/Flutter.podspec
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/android/.gradle/
+**/android/app/build/
+**/android/local.properties
+**/android/gradlew*
+**/android/gradle-wrapper.jar
+**/android/gradle/wrapper/
+
+# ===============================
+# Server (Docker + DB)
+# ===============================
+docker-compose.override.yml
+*.sqlite
+*.db
