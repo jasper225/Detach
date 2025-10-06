@@ -1,6 +1,6 @@
-// src/popup.tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 var browserApi = typeof browser !== "undefined" ? browser : chrome;
 function Popup() {
   const handlePing = () => {

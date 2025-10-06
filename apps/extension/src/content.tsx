@@ -1,4 +1,3 @@
-// src/content.tsx
 var browserApi = typeof browser !== "undefined" ? browser : chrome;
 
 console.log("Detach content script loaded 🪶");

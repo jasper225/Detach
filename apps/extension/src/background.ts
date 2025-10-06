@@ -1,4 +1,4 @@
-// src/background.ts
+
 var browserApi = typeof browser !== "undefined" ? browser : chrome;
 
 browserApi.runtime.onInstalled.addListener(() => {
