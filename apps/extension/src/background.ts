@@ -1,17 +1,21 @@
-
 var browserApi = typeof browser !== "undefined" ? browser : chrome;
 
-browserApi.runtime.onInstalled.addListener(() => {
-  console.log("Detach background service worker installed 🚀");
+console.log("Detach background script loaded");
+
+browserApi.tabs.onActivated.addListener((activeInfo: chrome.tabs.TabActiveInfo) => {
+  console.log("Tab switched:", activeInfo);
 });
 
-browserApi.tabs.onActivated.addListener((activeInfo) => {
-  console.log("Tab activated:", activeInfo);
-});
-
-browserApi.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.type === "PING") {
-    console.log("Received PING from content script 🐧");
-    sendResponse({ type: "PONG" });
+browserApi.runtime.onMessage.addListener(
+  (
+    message: any,
+    sender: chrome.runtime.MessageSender,
+    sendResponse: (response?: any) => void
+  ) => {
+    console.log("Message received:", message);
+    if (message.type === "PING") {
+      sendResponse({ status: "pong", timestamp: Date.now() });
+    }
+    return true; // Keep message channel open for async response
   }
-});
+);

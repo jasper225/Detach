@@ -1,14 +1,16 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "lib": ["ESNext"],
+    "composite": true,
+    "outDir": "../dist/server",
+    "rootDir": "./src",
     "module": "CommonJS",
     "target": "ES2020",
-    "types": ["node"]
+    "moduleResolution": "node", 
+    "tsBuildInfoFile": "../dist/server/.tsbuildinfo"
   },
-  "include": ["src"],
   "references": [
-    { "path": "../../packages/shared" }
-  ]
+    { "path": "../packages/shared" }
+  ],
+  "include": ["src/**/*.ts"]
 }

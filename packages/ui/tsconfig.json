@@ -1,14 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "jsx": "react-jsx",
+    "composite": true,
+    "outDir": "../../dist/ui",
+    "rootDir": "./src",
+    "jsx": "react",
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "composite": true
+    "tsBuildInfoFile": "../../dist/ui/.tsbuildinfo"  // ← Add this line
   },
-  "include": ["src"],
   "references": [
     { "path": "../shared" }
-  ]
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

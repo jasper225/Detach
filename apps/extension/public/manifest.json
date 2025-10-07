@@ -7,10 +7,24 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "content_scripts": {
+      "matches": [
+        "*://*.twitter.com/*",
+        "*://*.x.com/*",
+        "*://*.reddit.com/*",
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*",
+        "*://*.tiktok.com/*",
+        "*://*.youtube.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
   },
   "browser-specific-settings": {
     "gecko": {

@@ -1,14 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "jsx": "react-jsx",
-    "types": ["chrome", "firefox-webext-browser"],
-    "isolatedModules": true
+    "composite": true,
+    "outDir": "../../dist/extension",
+    "rootDir": ".",
+    "tsBuildInfoFile": "../../dist/extension/.tsbuildinfo"  // ← Add this line
   },
-  "include": ["src"],
   "references": [
-    { "path": "../../packages/shared" },
-    { "path": "../../packages/ui" }
-  ]
+    { "path": "../../packages/shared" }
+  ],
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }
