@@ -1,4 +1,4 @@
-Detach - A Chrome Extension to interrupt doomscrolling and redirect your attention toward healthier habits.
+Detach - A Chrome and Firefox Extension to interrupt doomscrolling and redirect your attention toward healthier habits.
 
 Doomscrolling — endlessly scrolling through negative feeds — drains time and mental energy.
 
