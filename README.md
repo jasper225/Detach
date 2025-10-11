@@ -19,4 +19,4 @@ Scroll-time tracking — detects when you exceed a threshold in supported sites
 
 - [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/) for bundling
-- Chrome Extension Manifest V3
+- Chrome+Firefox Extension Manifest V3
