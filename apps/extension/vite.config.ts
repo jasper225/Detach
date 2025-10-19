@@ -7,16 +7,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        popup: resolve(__dirname, "src/popup.html"),
         background: resolve(__dirname, "src/background.ts"),
         content: resolve(__dirname, "src/content.tsx"),
+        overlayInjector: resolve(__dirname, "src/overlay-injector.tsx"),
+        popup: resolve(__dirname, "src/popup.tsx"),
       },
       output: {
-        entryFileNames: (chunk) => {
-          if (chunk.name === "background") return "background.js";
-          if (chunk.name === "content") return "content.js";
-          return "assets/[name].js";
-        },
+        entryFileNames: "[name].js",
       },
     },
   },

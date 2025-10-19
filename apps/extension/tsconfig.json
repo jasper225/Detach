@@ -9,6 +9,6 @@
   "references": [
     { "path": "../../packages/shared" }
   ],
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "src/overlay-injector.tsx"],
   "exclude": ["node_modules"]
 }

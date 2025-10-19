@@ -24,7 +24,7 @@
         "*://*.tiktok.com/*",
         "*://*.youtube.com/*"
       ],
-      "js": ["content.js"],
+      "js": ["content.js", "overlayInjector.js"],
       "run_at": "document_idle"
     }
   ],
